@@ -1,8 +1,11 @@
 server:
   port: 8001
  
-spring:  application:    name: microservice-dept-provider
-  datasource:    type: com.alibaba.druid.pool.DruidDataSource
+spring:
+  application:
+    name: microserviceDeptProvider
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -22,6 +25,10 @@ mybatis:
   mapper-locations: classpath*:/mapper/*Mapper.xml
   type-aliases-package: com.naruto.springcloud.bean
   
-eureka:  client:    service-url:      defaultZone: http://eureka7001.com:7001/eureka
-  instance:    instance-id: microservice-dept-provider:8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: microservice-dept-provider:8001
     prefer-ip-address: true

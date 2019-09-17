@@ -1,5 +1,4 @@
-package com.naruto.controller;
-
+package com.naruto.springcloud.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,12 +10,6 @@ import com.naruto.springcloud.bean.Dept;
 
 import java.util.List;
 
-/**
- * 服务消费者
- * @author naruto
- * @name ${FILE_NAME}
- * @create 2018-09-19 23:40
- */
 @RestController
 public class DeptConsumerController {
 
