@@ -19,20 +19,20 @@ public class DeptConsumerController {
     private RestTemplate restTemplate;
 
 
-    @RequestMapping(value = "/saveDept")
+    @RequestMapping(value = "/add")
     public boolean add(Dept department){
-        return restTemplate.postForObject(RIBBON_MICRO_SERVICE_PEPT_URL+"/saveDept",department,Boolean.class);
+        return restTemplate.postForObject(RIBBON_MICRO_SERVICE_PEPT_URL+"/add",department,Boolean.class);
     }
 
-    @RequestMapping(value = "/queryDept/{id}")
+    @RequestMapping(value = "/get/{id}")
     public Dept get(@PathVariable("id") int id){
-        return restTemplate.getForObject(RIBBON_MICRO_SERVICE_PEPT_URL+"/queryDept/"+id,Dept.class);
+        return restTemplate.getForObject(RIBBON_MICRO_SERVICE_PEPT_URL+"/get/"+id,Dept.class);
     }
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping(value = "/queryAllDept")
-    public List<Dept> get(){
-        return restTemplate.getForObject(RIBBON_MICRO_SERVICE_PEPT_URL+"/queryAllDept", List.class);
+	@RequestMapping(value = "/getList")
+    public List<Dept> getList(){
+        return restTemplate.getForObject(RIBBON_MICRO_SERVICE_PEPT_URL+"/getList", List.class);
     }
 	
 }

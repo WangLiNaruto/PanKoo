@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface DeptMapper {
 
-    List<Dept> queryAllDept();
+    List<Dept> getList();
 
-    Dept queryDept(int id);
+    Dept get(int id);
 
-    void saveDept(Dept dept);
+    void add(Dept dept);
 }

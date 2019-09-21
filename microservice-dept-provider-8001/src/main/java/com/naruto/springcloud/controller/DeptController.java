@@ -21,19 +21,19 @@ public class DeptController {
         return "hello";
     }
 
-    @RequestMapping("/queryAllDept")
-    public List<Dept> queryAllDept(){
-        return deptService.queryAllDept();
+    @RequestMapping("/getList")
+    public List<Dept> getList(){
+        return deptService.getList();
     }
 
-    @RequestMapping("/queryDept/{id}")
-    public Dept queryDept(@PathVariable("id") int id){
-        return deptService.queryDept(id);
+    @RequestMapping("/get/{id}")
+    public Dept get(@PathVariable("id") int id){
+        return deptService.get(id);
     }
 
-    @RequestMapping("/saveDept")
-    public void saveDept(Dept dept){
-         deptService.saveDept(dept);
+    @RequestMapping("/add")
+    public void add(Dept dept){
+         deptService.add(dept);
     }
 
 }

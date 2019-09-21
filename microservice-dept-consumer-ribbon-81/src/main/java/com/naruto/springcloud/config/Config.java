@@ -1,6 +1,5 @@
 package com.naruto.springcloud.config;
 
-import com.netflix.loadbalancer.*;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

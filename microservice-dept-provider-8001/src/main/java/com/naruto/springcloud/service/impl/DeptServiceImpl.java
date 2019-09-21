@@ -15,17 +15,17 @@ public class DeptServiceImpl implements DeptService {
     private DeptMapper deptMapper;
 
     @Override
-    public List<Dept> queryAllDept() {
-        return deptMapper.queryAllDept();
+    public List<Dept> getList() {
+        return deptMapper.getList();
     }
 
     @Override
-    public Dept queryDept(int id) {
-        return deptMapper.queryDept(id);
+    public Dept get(int id) {
+        return deptMapper.get(id);
     }
 
     @Override
-    public void saveDept(Dept dept) {
-        deptMapper.saveDept(dept);
+    public void add(Dept dept) {
+        deptMapper.add(dept);
     }
 }

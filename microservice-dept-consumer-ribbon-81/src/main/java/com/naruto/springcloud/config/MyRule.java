@@ -16,7 +16,7 @@ public class MyRule {
      * @return
      */
     @Bean
-    public IRule myRule(){
+    public IRule iRule(){
         return new MyRuleImpl();
     }
 }
