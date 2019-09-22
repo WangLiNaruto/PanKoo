@@ -44,7 +44,7 @@ public class DeptController {
     public Dept processHystrix(@PathVariable("id") int id){
         Dept dept=new Dept();
         dept.setId(id);
-        dept.setDeptName("没有对应的信息,null -- @HystrixCommand");
+        dept.setDeptName("没有对应的信息,null -- @HystrixCommand--服务熔断");
         dept.setDbSource("no data in mysql");
         return dept;
     }

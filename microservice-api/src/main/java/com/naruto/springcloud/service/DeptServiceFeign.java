@@ -1,13 +1,15 @@
 package com.naruto.springcloud.service;
 
 import com.naruto.springcloud.bean.Dept;
+import com.naruto.springcloud.config.DeptClientServiceFallbackFactory;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@FeignClient("MICROSERVICEDEPTPROVIDER")
+//@FeignClient("MICROSERVICEDEPTPROVIDER")
+@FeignClient(value = "MICROSERVICEDEPTPROVIDER",fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptServiceFeign {
 
     @RequestMapping(value = "/add")

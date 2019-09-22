@@ -89,5 +89,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <module>microservice-dept-consumer-ribbon-81</module>
     <module>microservice-dept-consumer-feign-82</module>
     <module>microservice-dept-provider-hystrix-8004</module>
+    <module>microservice-hystrix-dashboard-9001</module>
+    <module>microservice-zuul-gateway-9527</module>
   </modules>
 </project>
