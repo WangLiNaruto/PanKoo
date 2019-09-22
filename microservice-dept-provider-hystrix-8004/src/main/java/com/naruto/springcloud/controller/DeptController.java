@@ -26,6 +26,11 @@ public class DeptController {
         return deptService.getList();
     }
 
+    /**
+     * 服务熔断：容易方法膨胀,耦合度太高
+     * @param id
+     * @return
+     */
     @RequestMapping("/get/{id}")
     @HystrixCommand(fallbackMethod = "processHystrix")
     public Dept get(@PathVariable("id") int id){
