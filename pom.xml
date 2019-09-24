@@ -91,5 +91,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <module>microservice-dept-provider-hystrix-8004</module>
     <module>microservice-hystrix-dashboard-9001</module>
     <module>microservice-zuul-gateway-9527</module>
+    <module>microservice-config-server-3344</module>
   </modules>
 </project>
