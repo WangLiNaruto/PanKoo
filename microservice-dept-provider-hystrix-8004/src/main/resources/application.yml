@@ -3,7 +3,7 @@ server:
  
 spring:
   application:
-    name: microservice-dept-provider
+    name: microserviceDeptProvider
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
