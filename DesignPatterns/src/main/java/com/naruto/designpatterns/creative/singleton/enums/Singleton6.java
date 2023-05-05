@@ -1,4 +1,4 @@
-package com.naruto.creative.singleton.enums;
+package com.naruto.designpatterns.creative.singleton.enums;
 
 /**
  * 是否 Lazy 初始化：否

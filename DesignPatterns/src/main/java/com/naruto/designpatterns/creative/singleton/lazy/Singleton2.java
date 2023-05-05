@@ -1,4 +1,4 @@
-package com.naruto.creative.singleton.lazy;
+package com.naruto.designpatterns.creative.singleton.lazy;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.naruto.creative.singleton.dcl;
+package com.naruto.designpatterns.creative.singleton.dcl;
 
 /**
  * 双检锁/双重校验锁（DCL，即 double-checked locking）
@@ -13,7 +13,7 @@ public class Singleton4 {
 
     }
 
-    public static Singleton4 getinstance() {
+    public static Singleton4 getInstance() {
         if (singleton4 == null) {
             synchronized (Singleton4.class) {
                 if (singleton4 == null) {

@@ -1,4 +1,4 @@
-package com.naruto.creative.singleton.hungry;
+package com.naruto.designpatterns.creative.singleton.hungry;
 
 /**
  * 饿汉式

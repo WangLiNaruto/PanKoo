@@ -1,4 +1,4 @@
-package com.naruto.creative.singleton.sic;
+package com.naruto.designpatterns.creative.singleton.sic;
 
 /**
  * 登记式/静态内部类
