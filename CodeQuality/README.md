@@ -44,7 +44,7 @@ why:问什么学习设计模式？
 
 
 
-### [面向对象](./main/java/com/naruto/oop/READEME.md)
+### [面向对象](./src/main/java/com/naruto/oop/README.md)
 
 * 面向对象的四大特性：封装、抽象、继承、多态
 * 面向对象编程和面向过程编程的区别和联系
