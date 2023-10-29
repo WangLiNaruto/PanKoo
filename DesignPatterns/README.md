@@ -11,31 +11,35 @@ why:问什么学习设计模式？
     代码质量是综合各种因素得到的结论，不能通过单一维度取评论.不同维度也不是完全独立，有些是具有包含关系，重叠关系，相互影响关系的.
     如下是几个最重要的最常用的评价标准：
 
-### 可维护性(maintainability)
-    可维护性：在不破坏原有设计，不引入新的bug的情况下，能够快速的修改或者添加代码.
+* 可维护性(maintainability)
+    >可维护性：在不破坏原有设计，不引入新的bug的情况下，能够快速的修改或者添加代码.
     实际上可维护性也是一个很难量化，偏向于代码整体的评价标准.
-    可维护性的影响因素：可读性、可扩展性、简洁性、代码分层分模块、高内聚低耦合、代码量、遵从基于接口而非实现编程的设计、业务复杂度、技术复杂度、文档
+    
+    >可维护性的影响因素：可读性、可扩展性、简洁性、代码分层分模块、高内聚低耦合、代码量、遵从基于接口而非实现编程的设计、业务复杂度、技术复杂度、文档
 
-### 可读性(readability)
-    可读性：代码是否易读，易理解,是代码质量最重要的标准之一
-    可读性的影响因素：编码规范、命名达意、注解、函数体大小、模块划分、高内聚低耦合
-    测量标准：Code Review的难易程度
+* 可读性(readability)
+    >可读性：代码是否易读，易理解,是代码质量最重要的标准之一
+    
+    >可读性的影响因素：编码规范、命名达意、注解、函数体大小、模块划分、高内聚低耦合
+    
+    > 测量标准：Code Review的难易程度
 
-### 可扩展性(extensibility)
-    可扩展性：代码应对未来需求变化的能力,即不修改或者少修改的情况下通过扩展的方式添加新的功能代码.
-
-### 灵活性(flexibility)
-
-### 简洁性(simplicity)
-    KISS:keep it Simple, Stupid
-    保持代码简单，逻辑清晰
-
-### 可复用性(reusability)
-    尽量减少重复代码的编写，复用已有代码
+* 可扩展性(extensibility)
+    >可扩展性：代码应对未来需求变化的能力,即不修改或者少修改的情况下通过扩展的方式添加新的功能代码.
+* 可复用性(reusability)
+    >尽量减少重复代码的编写，复用已有代码
     面向对象：继承多台存在的目的之一就是提高代码的可复用性，设计原则：单一职责原则也和代码的可复用性相关，重构：解耦、高内聚，模块化也能提高代码的可复用性
 
-### 可测试性(testability)
-    代码的可测试性能从侧面非常准确的反映代码的质量
+* 可测试性(testability)
+    >代码的可测试性能从侧面非常准确的反映代码的质量
+
+* 灵活性(flexibility)
+
+* 简洁性(simplicity)
+* KISS:keep it Simple, Stupid
+* 保持代码简单，逻辑清晰
+
+
 
 
 ## 如何提高代码质量
@@ -53,19 +57,19 @@ why:问什么学习设计模式？
 * 基于接口而非实现编程的设计思想
 * 面向过程的贫血模型和面向对象的充血模型
 
-### 设计原则
+### [设计原则](./src/main/java/com/naruto/oop/README.md) 
 
-* SRP单一职责原则:Single Responsibility Principle
-* LSP里氏替换原则: Liskov Substitution Principle
-* DIP依赖倒置原则:Dependence Inversion Principle
-* ISP接口隔离原则:Interface Segregation Principle
-* OCP开闭原则：open closed Principle
-* LOD迪米特法则:Law of Demeter
+* SRP单一职责原则 - Single Responsibility Principle
+* LSP里氏替换原则 - Liskov Substitution Principle
+* DIP依赖倒置原则 - Dependence Inversion Principle
+* ISP接口隔离原则 - Interface Segregation Principle
+* OCP开闭原则 - open closed Principle
+* LOD迪米特法则 - Law of Demeter
 * DRY原则
 * KISS原则
 * YAGNI原则
 
-### 设计模式
+### [设计模式](./src/main/java/com/naruto/designpatterns/DesignPatterns.md)
 
 #### 创建型模式
 
@@ -102,10 +106,10 @@ why:问什么学习设计模式？
 * 代理模式（Proxy Pattern）
 
 ### 编码规范
-    编程规范解决的是代码的可读性问题
+>编程规范解决的是代码的可读性问题
 
 ### 代码重构
-    代码重构作为保持代码质量的有效手段，利用的就是面向对象、设计原则、设计模式、编码规范等理论
+>代码重构作为保持代码质量的有效手段，利用的就是面向对象、设计原则、设计模式、编码规范等理论
 * 目的、对象、时机、方法
 * 单元测试和代码的可测试性
 * 大重构(大规模高层次)
