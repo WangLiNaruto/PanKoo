@@ -48,7 +48,7 @@ why:问什么学习设计模式？
 
 
 
-### [面向对象](./src/main/java/com/naruto/oop/README.md)
+### 面向对象
 
 * 面向对象的四大特性：封装、抽象、继承、多态
 * 面向对象编程和面向过程编程的区别和联系
@@ -57,7 +57,7 @@ why:问什么学习设计模式？
 * 基于接口而非实现编程的设计思想
 * 面向过程的贫血模型和面向对象的充血模型
 
-### [设计原则](./src/main/java/com/naruto/oop/README.md) 
+### [设计原则](./src/main/java/com/naruto/designpatterns/DesignPrinciples.md) 
 
 * SRP单一职责原则 - Single Responsibility Principle
 * LSP里氏替换原则 - Liskov Substitution Principle

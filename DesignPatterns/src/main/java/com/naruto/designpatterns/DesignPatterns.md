@@ -6,11 +6,15 @@
 ## 目的
     设计模式是为了让程序具有更好的高内聚低耦合，重用性，可靠性，可读性，可维护性，可扩展性
 
-## 六大原则
-* SRP单一职责原则:Single Responsibility Principle
-* LSP里氏替换原则: Liskov Substitution Principle
-* DIP依赖倒置原则:Dependence Inversion Principle
-* ISP接口隔离原则:Interface Segregation Principle
-* OCP开闭原则：open closed Principle
-* LOD迪米特法则:Law of Demeter
+## [设计原则](DesignPrinciples.md)
+
+## 分类
+
+#### 创建型模式
+
+* 单例模式（Singleton Pattern）
+* 工厂模式（Factory Pattern）
+* 抽象工厂模式（Abstract Factory Pattern）
+* 建造者模式（Builder Pattern）
+* 原型模式（Prototype Pattern）
     
