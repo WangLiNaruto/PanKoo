@@ -1,4 +1,4 @@
-#六大原则
+# 六大原则
 
 ## SRP `单一职责原则(Single Responsibility Principle)`
  
