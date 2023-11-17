@@ -39,14 +39,9 @@ why:问什么学习设计模式？
 * KISS:keep it Simple, Stupid
 * 保持代码简单，逻辑清晰
 
-
-
-
 ## 如何提高代码质量
     需要掌握一些更细化、更佳能落地的编程方法论
     实际上面向对象、设计原则、设计模式、编码规范、重构这五者都是保持或者提高代码质量的方法论，本质上都是服务于编写高质量代码.
-
-
 
 ### 面向对象
 
@@ -57,23 +52,24 @@ why:问什么学习设计模式？
 * 基于接口而非实现编程的设计思想
 * 面向过程的贫血模型和面向对象的充血模型
 
-### [设计原则](./src/main/java/com/naruto/designpatterns/DesignPrinciples.md) 
+### 设计原则
 
-* SRP单一职责原则 - Single Responsibility Principle
-* LSP里氏替换原则 - Liskov Substitution Principle
-* DIP依赖倒置原则 - Dependence Inversion Principle
-* ISP接口隔离原则 - Interface Segregation Principle
-* OCP开闭原则 - open closed Principle
-* LOD迪米特法则 - Law of Demeter
+* [SRP单一职责原则 - Single Responsibility Principle](docs/designPrinciples/SRP.md)
+* [LSP里氏替换原则 - Liskov Substitution Principle](docs/designPrinciples/LSP.md)
+* [DIP依赖倒置原则 - Dependence Inversion Principle](docs/designPrinciples/DIP.md)
+* [ISP接口隔离原则 - Interface Segregation Principle](docs/designPrinciples/ISP.md)
+* [OCP开闭原则 - open closed Principle](docs/designPrinciples/OCP.md)
+* [LOD迪米特法则 - Law of Demeter](docs/designPrinciples/LOD.md)
 * DRY原则
 * KISS原则
 * YAGNI原则
 
-### [设计模式](./src/main/java/com/naruto/designpatterns/DesignPatterns.md)
+### 设计模式
+    设计模式是对软件设计过程中普遍遇到的各种问题的解决方案.1990由埃里希-伽玛等人从建筑设计领域引入到计算机科学领域.
+    设计模式是为了让程序具有更好的高内聚低耦合，重用性，可靠性，可读性，可维护性，可扩展性
 
 #### 创建型模式
-
-* 单例模式（Singleton Pattern）
+* [单例模式 - Singleton Pattern](docs/designpattern/SingletonPattern.md)
 * 工厂模式（Factory Pattern）
 * 抽象工厂模式（Abstract Factory Pattern）
 * 建造者模式（Builder Pattern）
