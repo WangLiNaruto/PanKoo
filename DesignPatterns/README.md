@@ -75,6 +75,16 @@ why:问什么学习设计模式？
 * * 原型模式（Prototype Pattern）
 * 建造者模式（Builder Pattern）
 
+#### 结构型模式
+
+* 适配器模式（Adapter Pattern）
+* 桥接模式（Bridge Pattern）
+* 装饰器模式（Decorator Pattern）
+* 组合模式（Composite Pattern）
+* 外观模式（Facade Pattern）
+* 享元模式（Flyweight Pattern）
+* 代理模式（Proxy Pattern）
+
 #### 行为型模式
 
 * 模板模式（Template Pattern）
@@ -88,16 +98,6 @@ why:问什么学习设计模式？
 * 状态模式（State Pattern）
 * 策略模式（Strategy Pattern）
 * 责任链模式（Chain of Responsibility Pattern）
-
-#### 结构型模式
-
-* 适配器模式（Adapter Pattern）
-* 桥接模式（Bridge Pattern）
-* 装饰器模式（Decorator Pattern）
-* 组合模式（Composite Pattern）
-* 外观模式（Facade Pattern）
-* 享元模式（Flyweight Pattern）
-* 代理模式（Proxy Pattern）
 
 ### 编码规范
 >编程规范解决的是代码的可读性问题
