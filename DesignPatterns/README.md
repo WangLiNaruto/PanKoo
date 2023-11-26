@@ -69,6 +69,7 @@ why:问什么学习设计模式？
     设计模式是为了让程序具有更好的高内聚低耦合，重用性，可靠性，可读性，可维护性，可扩展性
 
 #### 创建型模式
+
 * [单例模式 - Singleton Pattern](docs/designpattern/SingletonPattern.md)
 * 工厂模式（Factory Pattern）
 * 抽象工厂模式（Abstract Factory Pattern）
