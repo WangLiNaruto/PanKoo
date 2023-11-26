@@ -44,7 +44,6 @@ public class Singleton{
 ```
 * 优点
     * 写法简单，类装载时就实例化，避免线程同步问题(线程安全问题)
-
 * 缺点
     * 类装载时就实例化，没有懒加载，容易造成内存浪费.
     * 它基于 classloader 机制避免了多线程的同步问题，不过，instance 在类装载时就实例化，虽然导致类装载的原因有很多种，在单例模式中大多数都是调用 getInstance 方法，
@@ -76,7 +75,6 @@ public class Singleton {
 * [线程安全同步方法](../../src/main/java/com/naruto/designpatterns/creative/singleton/lazy/Singleton2.java) - 不推荐，效率低
   * 优点
     * 线程安全，懒加载（第一次调用才初始化，避免内存浪费）
-  
   * 缺点
     * 必须加锁 synchronized 才能保证单例，但加锁会影响效率，效率太低
 ```java
