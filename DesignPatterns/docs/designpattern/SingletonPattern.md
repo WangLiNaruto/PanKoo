@@ -19,33 +19,42 @@
  * 饿汉式 - 静态变量
  */
 public class Singleton {
-  private static Singleton instance =new Singleton();
-  private Singleton(){
+  // 类加载时被初始化 Singleton 类的实例
+  private static final Singleton INSTANCE = new Singleton();
+
+  private Singleton() {
+
   }
-  public static Singleton getInstance(){
-    return instance;
+
+  // 实例的全局访问点
+  public static Singleton getInstance() {
+    return INSTANCE;
   }
 }
 
 /**
  * 饿汉式 - 静态代码快
  */
-public class Singleton{
-  private static Singleton instance;
+public class Singleton2 {
+  private static final Singleton2 INSTANCE;
+
   static {
-    instance = new Singleton();
+    INSTANCE = new Singleton2();
   }
-  private Singleton(){
+
+  private Singleton2() {
   }
-  public static Singleton getInstance(){
-    return instance;
+
+  public static Singleton2 getInstance() {
+    return INSTANCE;
   }
 }
 ```
 * 优点
-    * 写法简单，类装载时就实例化，避免线程同步问题(线程安全问题)
+    * 写法简单，线程安全(类装载时就实例化，避免线程同步问题)
 * 缺点
     * 类装载时就实例化，没有懒加载，容易造成内存浪费.
+    * 如果单例类依赖于其他类，这些依赖的类在类加载时也会被创建
     * 它基于 classloader 机制避免了多线程的同步问题，不过，instance 在类装载时就实例化，虽然导致类装载的原因有很多种，在单例模式中大多数都是调用 getInstance 方法，
     但是也不能确定有其他的方式（或者其他的静态方法）导致类装载，这时候初始化 instance 显然没有达到 lazy loading 的效果。
 
@@ -109,8 +118,7 @@ public class Singleton2 {
  * 双重校验锁 - DCL(double-checked locking)
  */
 public class Singleton {
-    
-    // volatile 关键字可以确保 singleton 变量的可见性和有序性
+    // volatile 关键字可以确保 singleton 变量的可见性和有序性，从而保证多线程环境下的正确性
     private static volatile Singleton singleton;
 
     private Singleton() {
@@ -147,6 +155,8 @@ public class Singleton {
 public class Singleton {
     private Singleton() {
     }
+    // SingletonHolder 类是 Singleton 类的一个静态内部类，它在 Singleton 类被加载时并不会立即被加载，
+    // 而是在第一次调用 Singleton.getInstance() 方法时才会被加载，从而实现了延迟加载
     private static class SingletonHolder {
         private static final Singleton INSTANCE = new Singleton();
     }
@@ -169,12 +179,83 @@ public class Singleton {
 ```java
 /**
  * 枚举类
+ * 枚举类型的实例在 Java 虚拟机中是唯一的，因此枚举常量也是单例的
  */
 public enum Singleton {
     INSTANCE;
 
     // 随便什么方法
     public void doSomething() {
+    }
+}
+```
+### [注册式单例模式](../../src/main/java/com/naruto/designpatterns/creative/singleton/register/Singleton.java)
+    注册式单例模式是一种灵活而可扩展的实现方式。在该模式中，单例实例被注册到一个全局的注册表中，可以实现对象的统一管理和获取，但需要注意容器的生命周期和线程安全问题
+
+* 优点
+  * 可以管理多个单例实例，可以通过名称或者其他方式来获取实例。
+  * 避免了全局变量带来的问题，比如命名冲突、不同作用域访问困难等。
+* 缺点
+  * 容易造成内存泄漏，因为单例实例不会被释放。
+  * 可能会造成重复创建对象的问题。
+  
+```java
+/**
+ * 注册式单例模式
+ */
+public class Singleton {
+
+    private static Map<String, Singleton> instances = new ConcurrentHashMap<>();
+    static {
+        instances.put(Singleton.class.getName(), new Singleton());
+    }
+    private Singleton() {}
+    public static Singleton getInstance() {
+        return instances.get(Singleton.class.getName());
+    }
+    public static void register(String key, Singleton instance) {
+        instances.put(key, instance);
+    }
+    public static Singleton getRegisteredInstance(String key) {
+        return instances.get(key);
+    }
+}
+```
+
+> Spring 框架中的 `Bean` 注册机制使用的是注册式单例模式。在 Spring 中， `Bean` 的注册是通过 `BeanDefinitionRegistry` 接口来完成的，
+> 而 `BeanDefinitionRegistry`接口的实现类包括了 `DefaultListableBeanFactory` 和 `GenericApplicationContext` 等。这些实现类在内部都使用了类似于注册式单例模式的方式来注册和管理 Bean。
+> 具体来说，Spring 在注册 `Bean` 时，会将 `Bean` 的定义信息封装成一个 `BeanDefinition` 对象，并将其注册到一个全局的 `BeanFactory` 中，以供后续的使用。
+> 在注册 `Bean` 的过程中， Spring 会根据 `BeanDefinition` 中的配置信息来创建相应的 `Bean` 实例， 同时还会对其进行依赖注入、生命周期管理等操作。 
+> 需要注意的是，Spring 的 `Bean` 注册机制中，虽然使用了类似于注册式单例模式的方式来管理 `Bean` ，但它并不是一个完全的单例模式实现。
+> 在 Spring 中， `Bean` 的单例性是在运行时动态实现的，而不是在编译期就确定的。
+> 也就是说，如果在 `BeanDefinition` 中将 `scope` 属性设置为 `prototype` ，那么每次获取该 Bean 实例时都会创建一个新的对象，而不是返回同一个单例实例
+
+### [ThreadLocal单例模式](../../src/main/java/com/naruto/designpatterns/creative/singleton/threadlocal/Singleton.java)
+
+* 优点
+  * 每个线程都有自己的单例对象副本，线程安全。
+  * 可以避免锁竞争，提高性能。
+* 缺点
+  * 可能会导致内存泄漏问题，需要注意对象的生命周期。
+
+```java
+/**
+ * ThreadLocal单例模式
+ */
+public class Singleton {
+    // ThreadLocal单例模式这种实现方式将单例对象存储在ThreadLocal中，每个线程都有自己的单例对象副本，保证了线程安全
+    private static final ThreadLocal<Singleton> singletonThreadLocal = new ThreadLocal<Singleton>() {
+        @Override
+        protected Singleton initialValue() {
+            return new Singleton();
+        }
+    };
+
+    private Singleton() {
+    }
+
+    public static Singleton getInstance() {
+        return singletonThreadLocal.get();
     }
 }
 ```
