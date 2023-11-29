@@ -258,7 +258,7 @@ public class Singleton {
 
 ## 类图
 
-![img.png](img/singleton.png)
+![img.png](img/SingletonPattern.png)
 
 ## 单例优缺点
 
