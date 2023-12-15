@@ -109,7 +109,7 @@ public class Client {
 
 
 ## 源码分析
-   JDK中的`java.util.Calendar`采用的就是饿汉式的单例模式
+   JDK中的`java.util.Calendar`采用的就是简单工厂模式
 ```java
 public abstract class Calendar implements Serializable, Cloneable, Comparable<Calendar> {
     // ...
