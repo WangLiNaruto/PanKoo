@@ -71,8 +71,8 @@ why:问什么学习设计模式？
 #### 创建型模式
 
 * [单例模式 - Singleton Pattern](docs/designpattern/SingletonPattern.md)
-* 工厂模式（Factory Pattern）
-* 抽象工厂模式（Abstract Factory Pattern）
+* [工厂模式 - Factory Pattern](docs/designpattern/FactoryMethodPattern.md)
+* [抽象工厂模式 - Abstract Factory Pattern](docs/designpattern/)
 * 原型模式（Prototype Pattern）
 * 建造者模式（Builder Pattern）
 
