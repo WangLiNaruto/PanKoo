@@ -2,7 +2,7 @@
 
 Pan-Koo意为盘古,个人开源笔记项目,主要记录日常的学习笔记
 
-[设计模式](./CodeQuality/README.md)
+[设计模式](DesignPatterns/README.md)
 
 [数据结构和算法](./DataStructuresAlgorithms/README.md)
 
