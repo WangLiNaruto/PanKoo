@@ -7,3 +7,4 @@
 /.idea/.gitignore
 /CodeQuality/CodeQuality.iml
 /DataStructuresAlgorithms/DataStructuresAlgorithms.iml
+/.idea/checkstyle-idea.xml
