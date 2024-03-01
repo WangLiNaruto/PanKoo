@@ -1,27 +1,27 @@
 # Redis
 
-## [概论](docs/Introduction.md)
+## [绠�浠媇(docs/Introduction.md)
 
-## [指令](docs/Commands.md)
+## [Commands](docs/Commands.md)
 
 ## [Feature](docs/Feature.md)
 
 ## [Client](docs/Client.md)
 
-## [持久化](docs/Persistence.md)
+## [鎸佷箙鍖朷(docs/Persistence.md)
 
-## [复制](docs/Copy.md)
+## [澶嶅埗](docs/Copy.md)
 
-## [Redis阻塞](docs/Block.md)
+## [Redis闃诲](docs/Block.md)
 
-## [内存](docs/Memory.md)
+## [鍐呭瓨](docs/Memory.md)
 
-## [哨兵](docs/Sentinel.md)
+## [鍝ㄥ叺](docs/Sentinel.md)
 
-## [集群](docs/Cluster.md)
+## [闆嗙兢](docs/Cluster.md)
 
-## [缓存设计](docs/CacheDesign.md)
+## [缂撳瓨璁捐](docs/CacheDesign.md)
 
-## [注意事项](docs/Precautions.md)
+## [娉ㄦ剰浜嬮」](docs/Precautions.md)
 
-## [字典](docs/Dictionary.md)
+## [閰嶇疆缁熻瀛楀吀](docs/Dictionary.md)
