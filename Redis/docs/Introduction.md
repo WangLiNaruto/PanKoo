@@ -45,9 +45,21 @@
 
 ### 可以做
 * `缓存`
+   
+  合理的使用缓存不仅可以使数据的访问速度加快，也可以降低后端数据源的压力,redis提供键过期时间设置、控制最大内存和内存溢出的淘汰策略
+
 * `排行榜系统`
+  
+  列表+有序集合
+
 * `计数器`
-* `消息队列系统` 发布订阅+阻塞队列
+
+  redis天然支持技术功能且性能非常好
+
+* `消息队列系统` 
+  
+  发布订阅+阻塞队列
+
 * `社交网络`
 
 ### 不可以做
@@ -57,6 +69,54 @@
   数据分为热数据和冷数据，热数据指需要频繁操作的数据，反之为冷数据
   如果将冷数据存储在内存中，将加大内存消耗
 
+### Redis Shell
+  redis安装后，在其安装目录下有几个以redis开头的可执行文件-redis shell
+  | 可执行文件                | 作用                             |
+  | -----------------------  | ----------------------------    |
+  | redis-server             | 启动redis                       |
+  | redis-cli                | redis命令行客户端                |
+  | redis-benchmark          | redis基准测试工具                |
+  | redis-check-aof          | redis aof持久化文件检测和修复工具  |
+  | redis-check-dump         | redis rdb持久化文件检测和修复工具  |
+  | redis-sentinel           | 启动redis sentinel              |
 
+#### 启动
+
+* 默认配置:使用redis的默认配置启动
+
+```shell
+redis-server
+```
+
+* 运行启动：reddis-server加上修改配置名称和值
+
+```shell
+redis-server --port 6380
+```
+
+* 配置文件启动:将配置写到制定文件里(/opt/redis/redis.conf)
+  
+```shell
+redis-server /opt/redis/redis.conf
+```
+
+#### 链接
+
+* 交互式方式：
+
+```shell
+redis-cli -h 127.0.0.7 -p 6379
+```
+
+* 命令方式：
+
+```shell
+redis-cli -h 127.0.0.7 -p 6379 set key value
+```
+#### 停止
+  redis提供shutdown来停止redis服务，shutdown 还有一个参数。代表是否在关闭redis前生成持久化文件
+```shell
+redis-cli shutdown nosave|save
+```
 
 
