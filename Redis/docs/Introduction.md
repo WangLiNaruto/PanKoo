@@ -69,7 +69,7 @@
   数据分为热数据和冷数据，热数据指需要频繁操作的数据，反之为冷数据
   如果将冷数据存储在内存中，将加大内存消耗
 
-### Redis Shell
+## Redis Shell
   redis安装后，在其安装目录下有几个以redis开头的可执行文件-redis shell
   | 可执行文件                | 作用                             |
   | -----------------------  | ----------------------------    |
@@ -80,7 +80,7 @@
   | redis-check-dump         | redis rdb持久化文件检测和修复工具  |
   | redis-sentinel           | 启动redis sentinel              |
 
-#### 启动
+### 启动
 
 * 默认配置:使用redis的默认配置启动
 
@@ -100,7 +100,7 @@ redis-server --port 6380
 redis-server /opt/redis/redis.conf
 ```
 
-#### 链接
+### 链接
 
 * 交互式方式：
 
@@ -113,7 +113,7 @@ redis-cli -h 127.0.0.7 -p 6379
 ```shell
 redis-cli -h 127.0.0.7 -p 6379 set key value
 ```
-#### 停止
+### 停止
   redis提供shutdown来停止redis服务，shutdown 还有一个参数。代表是否在关闭redis前生成持久化文件
 ```shell
 redis-cli shutdown nosave|save
